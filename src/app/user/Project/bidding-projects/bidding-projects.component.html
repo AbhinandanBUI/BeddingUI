@@ -1,0 +1,16 @@
+<form [formGroup]="biddingForm" (ngSubmit)="submitBid()" class="w-25">
+  <label class="form-label" for="bidAmount">Your Bid Amount:</label>
+  <input class="form-control" type="number" id="bidAmount" formControlName="bidAmount">
+  <div *ngIf="bidamount.invalid && (bidamount.dirty || bidamount.touched)">
+    <div *ngIf="bidamount.errors.required" class="text-danget">Bid amount is required*.</div>
+    <div *ngIf="bidamount.errors.min" class="text-danget">Bid amount must be at least 1 *.</div>
+  </div>
+
+  <label class="form-label" for="bidDescription">Bid Description:</label>
+  <textarea class="form-control" id="bidDescription" formControlName="bidDescription"></textarea>
+  <div *ngIf="biddis.invalid && biddis.touched" class="text-danger">
+    Bid description is required*.
+  </div>
+
+  <button class="btn btn-primary pt-2" type="submit" [disabled]="biddingForm.invalid">Place Bid</button>
+</form>

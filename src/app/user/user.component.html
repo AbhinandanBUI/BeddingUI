@@ -1,0 +1,183 @@
+       <!-- Basic -->
+
+       <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+         <div class="container-fluid">
+           <a class="navbar-brand" routerLink="/user/"><i class="bi bi-bar-chart-fill fs-2x"></i>  {{myconfig.appTitle}}</a>
+           <button
+             class="navbar-toggler"
+             type="button"
+             data-bs-toggle="collapse"
+             data-bs-target="#navbarSupportedContent"
+             aria-controls="navbarSupportedContent"
+             aria-expanded="false"
+             aria-label="Toggle navigation"
+           >
+             <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <li class="nav-item">
+                 <a class="nav-link active" aria-current="page" routerLink="/user/home/">Home</a>
+               </li>
+               <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                   (mouseover)="openDropdown()"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                Projects
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" routerLink="/user/project/activeproject"><i class="bi bi-bank2" style="font-size: 1em; color: #007bff;"></i> Active projects</a></li>
+                  <li><a class="dropdown-item" routerLink="/user/project/pastproject"><i class="bi bi-coin" style="font-size: 1em; color: #007bff;"></i> Past project</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li><a class="dropdown-item" routerLink="/user/project/biddingproject">Bidding projects</a></li>
+                </ul>
+              </li>
+               <li class="nav-item">
+                 <a class="nav-link" >Active project</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link">Past project</a>
+               </li>
+               <li class="nav-item dropdown">
+                 <a
+                   class="nav-link dropdown-toggle"
+                   href="javascript:void(0)"
+                   id="navbarDropdown"
+                   role="button"
+                   data-bs-toggle="dropdown"
+                   aria-expanded="false"
+                 >
+                   Finance
+                 </a>
+                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   <li><a class="dropdown-item" href="javascript:void(0)"><i class="bi bi-bank2" style="font-size: 1em; color: #007bff;"></i> Withdraw</a></li>
+                   <li><a class="dropdown-item" href="javascript:void(0)"><i class="bi bi-coin" style="font-size: 1em; color: #007bff;"></i> Winnigs</a></li>
+                   <li>
+                     <hr class="dropdown-divider" />
+                   </li>
+                   <li><a class="dropdown-item" href="javascript:void(0)">Financial dashboard</a></li>
+                 </ul>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link " >Bids</a>
+               </li>
+
+
+             </ul>
+             <div class="d-flex">
+              <button class="btn btn-sm round-circle"> <i class="bi bi-bell-fill" style="font-size: 2em; color: #173f9c;"> <sup class="text-danger fs-4 fw-bold">2</sup></i></button>
+              <button class="btn btn-sm round-circle"> <i class="bi bi-folder-fill" style="font-size: 2em; color: #d3114e;"> <sup class="text-danger fs-4 fw-bold">2</sup></i> </button>
+              <button class="btn btn-sm round-circle"> <i class="bi bi-chat-dots-fill" style="font-size: 2em; color: #06e50e;"> <sup class="text-danger fs-4 fw-bold">2</sup></i> </button>
+            </div>
+
+<div class="d-flex" style="margin-top: -27px;">
+  <li class="nav-item navbar-dropdown dropdown-user dropdown float-end">
+    <a class="nav-link dropdown-toggle hide-arrow"   data-bs-toggle="dropdown">
+      <div class="avatar avatar-online">
+        <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+      </div>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end">
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex">
+            <div class="flex-shrink-0 me-3">
+              <div class="avatar avatar-online">
+                <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+              </div>
+            </div>
+            <div class="flex-grow-1">
+              <span class="fw-semibold d-block">John Doe</span>
+              <small class="text-muted">Admin</small>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <div class="dropdown-divider"></div>
+      </li>
+      <li>
+        <a class="dropdown-item"  routerLink="/user/account">
+          <i class="bi bi-person-fill me-2"></i>
+          <span class="align-middle">My Profile</span>
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item"  routerLink="/user/">
+          <i class="bi bi-gear-fill me-2"></i>
+          <span class="align-middle">Settings</span>
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item"  routerLink="/user/">
+          <span class="d-flex align-items-center align-middle">
+            <i class="flex-shrink-0 bi bi-credit-card-2-front-fill me-2" ></i>
+            <span class="flex-grow-1 align-middle">Billing</span>
+            <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <div class="dropdown-divider"></div>
+      </li>
+      <li>
+        <a class="dropdown-item"  routerLink="/yourwork/login">
+          <i class="bx bx-power-off me-2"></i>
+          <span class="align-middle">Log Out</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</div>
+
+           </div>
+         </div>
+       </nav>
+       <!--/ Basic -->
+
+<router-outlet>
+
+</router-outlet>
+
+<footer class="footer   mt-3">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="../../../assets/img/icons/brands/google.png" alt="Company Logo">
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: yourwork@gmail.com</p>
+        <p>Phone: +91 8505948801</p>
+        <p>Address: Hi tech Pg Sec 41 Gurgoan <strong>HR - 122001</strong></p>
+      </div>
+    </div>
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-facebook text-info"></i></a>
+        <a href="#"><i class="bi bi-twitter text-info"></i></a>
+        <a href="#"><i class="bi bi-instagram text-danger"></i></a>
+        <a href="#"><i class="bi bi-linkedin text-info"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+

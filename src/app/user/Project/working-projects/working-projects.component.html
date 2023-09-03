@@ -1,0 +1,51 @@
+
+
+<div class="card-body">
+  <div class="container">
+    <div class="list-group" *ngFor="let item of itemsToShow">
+      <a
+
+        class="list-group-item list-group-item-action flex-column align-items-start my-2 "
+      >
+        <div class="d-flex justify-content-between w-100">
+          <h6 class="h3">{{item.projectName}} (projectid : {{item.id}})</h6>
+
+        </div>
+        <p class="mb-1 p-5">
+          {{item.projectDescription}}
+        </p>
+        <!-- <p class="p-5"> -->
+        <p class="py-1 px-2">
+       Skills <span class="text-danger h4">*</span> :   <span *ngFor="let skill of item.skills" class="badge  bg-label-danger me-2">{{skill.name}}</span>
+        </p>
+      <h6 class="h5">Price :<span  class="ms-2">{{item.projectPrice|currency:item.currencyType}}</span> </h6>
+      <h6>Duration :   <small>{{item.projectDuration}} {{item.durationType}} </small> </h6>
+        <button type="button" class="btn btn-primary float-end" (click)="biddnow(item)" >Bid now</button>
+
+      </a>
+
+    </div>
+    <nav>
+      <ul class="pagination">
+        <li class="page-item" [class.disabled]="currentPage === 1">
+          <a class="page-link" (click)="goToPage(currentPage - 1)" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item" *ngFor="let page of pages" [class.active]="page === currentPage">
+          <a class="page-link" (click)="goToPage(page)">{{ page }}</a>
+        </li>
+        <li class="page-item" [class.disabled]="currentPage === pages.length">
+          <a class="page-link" (click)="goToPage(currentPage + 1)" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+
+
+
